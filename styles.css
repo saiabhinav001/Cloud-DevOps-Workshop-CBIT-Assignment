@@ -1,0 +1,250 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 30px;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.contact-info i {
+    color: #3498db;
+    margin-right: 8px;
+    width: 15px;
+    text-align: center;
+}
+
+/* Main Content Layout */
+main {
+    display: flex;
+    gap: 30px;
+}
+
+.left-column {
+    flex: 2;
+}
+
+.right-column {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Education Styles */
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h4 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-weight: 500;
+    color: #555;
+}
+
+.details, .date {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Project Styles */
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h4 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.project-item .date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.project-item ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.project-item li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.tech {
+    font-size: 14px;
+    color: #3498db;
+    font-style: italic;
+}
+
+/* Skills Styles */
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-item span {
+    width: 150px;
+    font-size: 14px;
+}
+
+.skill-level {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 0 10px;
+    position: relative;
+}
+
+.skill-level::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+.expert::before {
+    width: 90%;
+}
+
+.intermediate::before {
+    width: 65%;
+}
+
+.beginner::before {
+    width: 40%;
+}
+
+.skill-text {
+    width: auto !important;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Soft Skills and Languages Styles */
+.soft-skills ul, .languages ul, .achievements ul {
+    list-style-type: none;
+}
+
+.soft-skills li, .languages li, .achievements li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.soft-skills li:before, .languages li:before, .achievements li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-info {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    main {
+        flex-direction: column;
+    }
+    
+    .right-column {
+        padding: 15px;
+    }
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .right-column {
+        background-color: white;
+    }
+}
